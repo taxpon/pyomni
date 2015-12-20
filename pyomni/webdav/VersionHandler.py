@@ -26,7 +26,7 @@ __version__ = '$Revision$'[11:-2]
 import types
 
 from pyomni.webdav import Constants
-from davlib import XML_CONTENT_TYPE, XML_DOC_HEADER
+from pyomni.webdav.davlib import XML_CONTENT_TYPE, XML_DOC_HEADER
 
 
 class VersionHandler(object):

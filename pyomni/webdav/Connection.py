@@ -40,8 +40,8 @@ except ImportError: # for Python 2.4 compatibility
     from uuid_ import uuid4
 from xml.parsers.expat import ExpatError
 
-from davlib import DAV
-from qp_xml import Parser
+from pyomni.webdav.davlib import DAV
+from pyomni.webdav.qp_xml import Parser
 
 from pyomni.webdav.WebdavResponse import MultiStatusResponse, ResponseFormatError
 from pyomni.webdav import Constants

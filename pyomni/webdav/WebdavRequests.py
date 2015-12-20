@@ -19,16 +19,13 @@
 This module handles WebDav server requests.
 """
 
-
 import types
-from pyomni.webdav import Constants
-import qp_xml
 from tempfile import TemporaryFile
 
-from davlib import XML_DOC_HEADER
-
+from pyomni.webdav import Constants
+from pyomni.webdav import qp_xml
+from pyomni.webdav.davlib import XML_DOC_HEADER
 from pyomni.webdav.NameCheck import validatePropertyName
-
 
 __version__ = "$LastChangedRevision$"
 

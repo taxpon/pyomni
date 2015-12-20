@@ -6,11 +6,11 @@ import zipfile
 import logging
 import datetime
 
-from .util import get_random_code
-from .webdav.WebdavClient import CollectionStorer
-from .webdav.WebdavClient import ResourceStorer
-from .webdav.WebdavClient import parseDigestAuthInfo
-from .webdav.Connection import AuthorizationError
+from pyomni import util
+from pyomni.webdav.WebdavClient import CollectionStorer
+from pyomni.webdav.WebdavClient import ResourceStorer
+from pyomni.webdav.WebdavClient import parseDigestAuthInfo
+from pyomni.webdav.Connection import AuthorizationError
 
 OMNI_SERVER_BASE_URL = "https://sync1.omnigroup.com/"
 logging.disable(logging.INFO)
@@ -81,7 +81,7 @@ class PyOmni(object):
     def create_zip_name(last_id):
         now = datetime.datetime.utcnow().strftime("%Y%m%d%H%M%S")
         return "{}={}+{}.zip".format(
-            now, last_id, get_random_code()
+            now, last_id, util.get_random_code()
         )
 
     @staticmethod

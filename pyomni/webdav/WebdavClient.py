@@ -20,7 +20,7 @@ This module contains the classes ResourceStorer and CollectionStorer for accessi
 """
 
 from __future__ import absolute_import
-from davlib import XML_CONTENT_TYPE
+from pyomni.webdav.davlib import XML_CONTENT_TYPE
 
 from urlparse import urlsplit
 import re

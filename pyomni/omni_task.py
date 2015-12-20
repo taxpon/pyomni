@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
+from __future__ import absolute_import
 import datetime
 import xml.dom.minidom
-import util
+import pyomni.util
 
 NS = 'http://www.omnigroup.com/namespace/OmniFocus/v1'
 APP_ID = 'com.omnigroup.OmniFocus2.MacAppStore'
@@ -49,7 +50,7 @@ class OmniTask(object):
         el.setAttribute("xmlns", NS)
 
         task = doc.createElement("task")
-        task.setAttribute("id", util.get_random_code())
+        task.setAttribute("id", pyomni.util.get_random_code())
         el.appendChild(task)
 
         added = doc.createElement("added")

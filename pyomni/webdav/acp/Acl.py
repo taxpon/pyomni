@@ -24,7 +24,7 @@ ACL object handling according to WebDAV ACP specification.
 from pyomni.webdav.acp.Ace import ACE
 from pyomni.webdav import Constants
 from pyomni.webdav.Connection import WebdavError
-from davlib import XML_DOC_HEADER
+from pyomni.webdav.davlib import XML_DOC_HEADER
 
 
 __version__ = "$LastChangedRevision$"

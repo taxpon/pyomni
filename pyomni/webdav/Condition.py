@@ -23,7 +23,7 @@ a search condition. This tree is made up of AND-nodes, OR-nodes, Operator- and c
 nodes and from property (i.e. variable) and constant leaf nodes.
 """
 
-
+from __future__ import absolute_import
 import types
 from time import strftime
 from calendar import timegm

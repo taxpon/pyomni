@@ -19,14 +19,15 @@
 Handles WebDAV responses.
 """
 
-
-from davlib import _parse_status
-import qp_xml
-from pyomni.webdav import Constants, logger
 import sys
 import time
 import rfc822
 import urllib
+
+from pyomni.webdav.davlib import _parse_status
+from pyomni.webdav import qp_xml
+from pyomni.webdav import Constants, logger
+
 # Handling Jython 2.5 bug concerning the date pattern
 # conversion in time.strptime
 try:
