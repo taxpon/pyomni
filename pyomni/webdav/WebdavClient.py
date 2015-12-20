@@ -19,7 +19,7 @@
 This module contains the classes ResourceStorer and CollectionStorer for accessing WebDAV resources.
 """
 
-
+from __future__ import absolute_import
 from davlib import XML_CONTENT_TYPE
 
 from urlparse import urlsplit

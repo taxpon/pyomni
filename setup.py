@@ -2,7 +2,7 @@ from setuptools import setup
 import pyomni
 
 setup(
-    # name=pymesh.__title__,
+    name=pyomni.__name__,
     # packages=[pymesh.__title__],
     # version=pymesh.__version__,
     # author=pymesh.__author__,
