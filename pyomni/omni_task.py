@@ -6,12 +6,16 @@ import util
 NS = 'http://www.omnigroup.com/namespace/OmniFocus/v1'
 APP_ID = 'com.omnigroup.OmniFocus2.MacAppStore'
 
+
 class OmniTask(object):
 
     def __init__(self, name, date=None, project=None, context=None):
         self._name = name
+
         if date is None:
             self._date = datetime.datetime.utcnow()
+        else:
+            self._date = date
 
         self._project = project
         self._context = context
@@ -27,6 +31,7 @@ class OmniTask(object):
     @property
     def project(self):
         return self._project
+
     @property
     def context(self):
         return self._context

@@ -170,3 +170,17 @@ class PyOmni(object):
     @digest(ResourceStorer)
     def rm(self, file_path, conn):
         conn.delete()
+
+    def add_task(self, task):
+        """Add task to Omnifocus sync server
+        :param OmniTask task:
+        :return:
+        """
+        last_id = self.get_last_id()
+        zip_name = PyOmni.create_zip_name(last_id)
+        zip_buf = PyOmni.create_zip_body([[
+            "contents.xml",
+            task.get_xml()
+        ]])
+        self.upload_content(zip_name, zip_buf)
+        return
