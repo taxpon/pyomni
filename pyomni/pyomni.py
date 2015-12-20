@@ -7,10 +7,10 @@ import logging
 import datetime
 
 import pyomni.util
-from webdav.WebdavClient import CollectionStorer
-from webdav.WebdavClient import ResourceStorer
-from webdav.WebdavClient import parseDigestAuthInfo
-from webdav.Connection import AuthorizationError
+from pyomni.webdav.WebdavClient import CollectionStorer
+from pyomni.webdav.WebdavClient import ResourceStorer
+from pyomni.webdav.WebdavClient import parseDigestAuthInfo
+from pyomni.webdav.Connection import AuthorizationError
 
 OMNI_SERVER_BASE_URL = "https://sync1.omnigroup.com/"
 logging.disable(logging.INFO)
