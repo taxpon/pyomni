@@ -80,7 +80,9 @@ class PyOmni(object):
     @staticmethod
     def create_zip_name(last_id):
         now = datetime.datetime.utcnow().strftime("%Y%m%d%H%M%S")
-        return "{}={}+{}.zip".format(now, last_id, pyomni.util.get_random_code())
+        return "{}={}+{}.zip".format(
+            now, last_id, pyomni.util.get_random_code()
+        )
 
     @staticmethod
     def create_zip_body(file_list, write=False):

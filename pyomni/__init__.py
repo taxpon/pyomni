@@ -3,3 +3,4 @@ from .pyomni import PyOmni
 from .omni_task import OmniTask
 
 __author__ = 'takuro'
+__version__ = '0.1.0'
