@@ -5,6 +5,10 @@ Python library to manipulate Omnifocus tasks.
 - Add task to inbox
 
 # How to use
+- Install
+```Bash
+$ pip install pyomni
+```
 - Sample code
 ```Python
 from pyomni import PyOmni
@@ -22,9 +26,6 @@ if __name__ == "__main__":
     po.add_task(task)
 ```
 ![Inbox](https://rawgit.com/taxpon/pyomni/master/resources/inbox.jpg)
-
-# Dependencies
-- [python-webdev-lib](https://launchpad.net/python-webdav-lib)
 
 # Reference
 - [Omnifocus .ofocus file format](https://github.com/tomzx/ofocus-format/tree/2.0)

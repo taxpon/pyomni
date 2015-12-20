@@ -3,19 +3,16 @@ import pyomni
 
 setup(
     name=pyomni.__name__,
-    # packages=[pymesh.__title__],
-    # version=pymesh.__version__,
-    # author=pymesh.__author__,
-    # author_email="taxpon@gmail.com",
-    # description="Library for manipulating (Translate, Rotate and Scale) 3D data using numpy.",
-    # url=pymesh.__url__,
-    # license=pymesh.__license__,
-    # classifiers=[
-    #     'License :: OSI Approved :: MIT License',
-    #     "Programming Language :: Python",
-    #
-    # ],
-    # install_requires=[
-    #     'numpy'
-    # ],
+    packages=[pyomni.__name__],
+    version=pyomni.__version__,
+    author=pyomni.__author__,
+    author_email="taxpon@gmail.com",
+    description="Python library to handle omnifocus tasks.",
+    url=pyomni.__url__,
+    license=pyomni.__license__,
+    classifiers=[
+        'License :: OSI Approved :: MIT License',
+        "Programming Language :: Python",
+
+    ]
 )
