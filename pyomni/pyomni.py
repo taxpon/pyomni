@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
+from __future__ import absolute_import
 import sys
 import io
 import zipfile
 import logging
 import datetime
 
-import util
-from  omni_task import OmniTask
+import pyomni.util
 from webdav.WebdavClient import CollectionStorer
 from webdav.WebdavClient import ResourceStorer
 from webdav.WebdavClient import parseDigestAuthInfo
@@ -31,7 +31,7 @@ def digest(storer):
             conn = storer(url, validateResourceNames=False)
             try:
                 conn.readAllProperties()
-            except AuthorizationError, e:
+            except AuthorizationError as e:
                 if e.authType == "Digest":
                     info = parseDigestAuthInfo(e.authInfo)
                     conn.connection.addDigestAuthorization(
@@ -80,7 +80,7 @@ class PyOmni(object):
     @staticmethod
     def create_zip_name(last_id):
         now = datetime.datetime.utcnow().strftime("%Y%m%d%H%M%S")
-        return "{}={}+{}.zip".format(now, last_id, util.get_random_code())
+        return "{}={}+{}.zip".format(now, last_id, pyomni.util.get_random_code())
 
     @staticmethod
     def create_zip_body(file_list, write=False):
@@ -91,7 +91,6 @@ class PyOmni(object):
 
         with zipfile.ZipFile(fo, "w") as fh:
             for fd in file_list:
-                print fd
                 fh.writestr(fd[0], fd[1])
 
         if write:

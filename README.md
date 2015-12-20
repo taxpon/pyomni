@@ -23,6 +23,9 @@ if __name__ == "__main__":
 ```
 ![Inbox](https://rawgit.com/taxpon/pyomni/master/resources/inbox.jpg)
 
+# Dependencies
+- [python-webdev-lib](https://launchpad.net/python-webdav-lib)
+
 # Reference
 - [Omnifocus .ofocus file format](https://github.com/tomzx/ofocus-format/tree/2.0)
 - [Is editing the XML files to handle completes an option?](http://forums.omnigroup.com/showthread.php?p=105247#post105247)

@@ -1,2 +1,5 @@
 .idea
 sample.py
+__pycache__/
+*.py[cod]
+.python-version
