@@ -1,3 +1,5 @@
+.. image:: https://api.travis-ci.org/taxpon/pyomni.svg
+
 ======
 pyomni
 ======
