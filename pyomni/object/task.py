@@ -4,26 +4,22 @@ import datetime
 import xml.dom.minidom
 import pyomni.config
 import pyomni.util
+import pyomni.object
 from pyomni.object.base import OmniObjectBase
 
 
 class OmniTask(OmniObjectBase):
 
     def __init__(self, name, added=None):
-        super(OmniTask, self).__init__()
-        self._name = name
-        self._added = added if added is not None else datetime.datetime.utcnow()
+        super(OmniTask, self).__init__(name=name, added=added)
         return
 
     def get_xml(self):
-        doc = xml.dom.minidom.Document()
-        el = doc.createElementNS(pyomni.config.NS, "omnifocus")
-        el.setAttribute("app-id", pyomni.config.APP_ID)
-        el.setAttribute("xmlns", pyomni.config.NS)
+        doc, root = pyomni.util.create_xml_base()
 
         task = doc.createElement("task")
-        task.setAttribute("id", pyomni.util.get_random_code())
-        el.appendChild(task)
+        task.setAttribute("id", pyomni.util.generate_random_code())
+        root.appendChild(task)
 
         added = doc.createElement("added")
         added_text = doc.createTextNode(self.get_formatted_added())
@@ -36,5 +32,5 @@ class OmniTask(OmniObjectBase):
         task.appendChild(added)
         task.appendChild(name)
 
-        doc.appendChild(el)
+        doc.appendChild(root)
         return doc.toprettyxml(encoding="utf-8", indent="", newl="")

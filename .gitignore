@@ -5,3 +5,4 @@ __pycache__/
 .python-version
 dist
 pyomni.egg-info
+nosetests.xml

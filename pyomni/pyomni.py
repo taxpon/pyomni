@@ -81,7 +81,7 @@ class PyOmni(object):
     def create_zip_name(last_id):
         now = datetime.datetime.utcnow().strftime("%Y%m%d%H%M%S")
         return "{}={}+{}.zip".format(
-            now, last_id, util.get_random_code()
+            now, last_id, util.generate_random_code()
         )
 
     @staticmethod
