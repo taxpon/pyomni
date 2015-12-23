@@ -1,6 +1,6 @@
 from __future__ import absolute_import
 from pyomni.pyomni import PyOmni
-from pyomni.omni_task import OmniTask
+from pyomni.object.task import OmniTask
 
 __author__ = 'Takuro Wada'
 __version__ = '0.1.6.1'

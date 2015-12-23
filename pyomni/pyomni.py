@@ -174,8 +174,8 @@ class PyOmni(object):
 
     def add_task(self, task):
         """Add task to Omnifocus sync server
-        :param OmniTask task:
-        :return:
+        :param pyomni.object.task.OmniTask task:
+        :rtype: None
         """
         last_id = self.get_last_id()
         zip_name = PyOmni.create_zip_name(last_id)
